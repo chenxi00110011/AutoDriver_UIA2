@@ -1,0 +1,24 @@
+import os
+
+
+def rename_file(old_path, new_name):
+    """
+    Rename a file from old_path to new_name.
+
+    :param old_path: The current full path of the file.
+    :param new_name: The new name for the file (without the path).
+    """
+    directory = os.path.dirname(old_path)
+    new_path = os.path.join(directory, new_name)
+
+    try:
+        os.rename(old_path, new_path)
+        print(f"The file has been renamed from '{old_path}' to '{new_path}'.")
+    except OSError as e:
+        print(f"Error renaming file: {e}")
+
+if __name__ == '__main__':
+    # Example usage:
+    old_file_path = r"C:\Users\Administrator\Desktop\data\sftp\139.159.218.144\DID_Dump.log"
+    new_file_name = r"C:\Users\Administrator\Desktop\data\sftp\139.159.218.144\DID_Dump_01.log"
+    rename_file(old_file_path, new_file_name)
