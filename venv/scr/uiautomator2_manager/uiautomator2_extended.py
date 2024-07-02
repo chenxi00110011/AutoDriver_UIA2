@@ -22,7 +22,7 @@ class Uiautomator2SophisticatedExecutor(UiAutomator2TestDriver):
         return self.digraph.compute_page_trust_score(page_content)
 
     # @retry(retries=2)
-    @exception_handler
+    # @exception_handler
     def go_to_page(self, *args):
         """
         跳转到指定页面，处理必要的交互。
@@ -91,7 +91,7 @@ class Uiautomator2SophisticatedExecutor(UiAutomator2TestDriver):
 
 
 if __name__ == '__main__':
-    d = Uiautomator2SophisticatedExecutor('AEUN9X1721G07755', 'com.zwcode.p6slite')
+    d = Uiautomator2SophisticatedExecutor('H675FIS8JJU8AMWW', 'com.zwcode.p6slite')
     while True:
         pageName = input('请手动跳转页面，并输出页面名称：')
         # d.getAllElement(pageName)

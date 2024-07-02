@@ -4,6 +4,8 @@
 Author:chenxi
 Date:2024年3月29日
 """
+import time
+
 import networkx as nx
 from excel_utils import AdjacencyListHandler
 from config_module import ConfigManagerRUIBOSHI as rui
@@ -134,6 +136,7 @@ class AppFlowGraph:
         # print(self.allElemDict)
         # 遍历self.allElemDict中的每个页面名和对应的元素列表
         for pageName, element_list in self.allElemDict.items():
+            # print(pageName, element_list )
             # 如果当前页面名还未在score_dict中，则初始化其分数为0
             if pageName not in score_dict.keys():
                 score_dict[pageName] = 0
@@ -165,15 +168,17 @@ if __name__ == '__main__':
 
 
     @timer
-    def test():
+    def demo():
         dev = UiAutomator2TestDriver('H675FIS8JJU8AMWW', 'com.zwcode.p6slite')
         G = AppFlowGraph()
         # G.show_directed_graph_visualization()
-        G.get_shortest_path_for_app_pages('首页', '蓝牙-设备连接中')
+        # G.get_shortest_path_for_app_pages('首页', '蓝牙-设备连接中')
+        time.sleep(10)
         while True:
             a = input("请输入回车继续：")
             page_source = dev.driver.dump_hierarchy()
+            print(page_source)
             print(G.compute_page_trust_score(page_source))
 
 
-    test()
+    demo()

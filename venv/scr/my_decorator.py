@@ -124,7 +124,7 @@ def debug(head=None, print_flag=True):
             # 如果print_flag为True，则打印返回值
             if print_flag:
                 # 如果提供了head前缀，则在返回值前面打印它
-                logger.info(head, res)
+                print(head, res)
                 # 返回函数的原始结果
             return res
 

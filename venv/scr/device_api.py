@@ -66,9 +66,9 @@ class DeviceAPIManager(DevEndpoints):
 
 
 if __name__ == '__main__':
-    endpoints = DeviceAPIManager('192.168.123.154')
-    # endpoints.open_telnet()
-    endpoints.device_reverse_packet()
+    endpoints = DeviceAPIManager('192.168.156.137')
+    endpoints.open_telnet()
+    # endpoints.device_reverse_packet()
     # endpoints.get_sdcard_info()
     # endpoints.get_time_info()
 

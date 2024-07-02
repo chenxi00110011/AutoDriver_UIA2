@@ -20,7 +20,7 @@ for i in tqdm(range(2)):
                      '设置唤醒': []}
     time.sleep(5)
     sleep_time = 10
-    did = '000602'
+    did = '000244'
     quality = '超清'
     logger.info(f"设备休眠时间为{sleep_time}秒")
     time.sleep(sleep_time)
