@@ -1,0 +1,4 @@
+.idea/
+# 忽略 data 目录下的所有文件，除了 .xlsx 文件
+data/*
+!data/*.xlsx
