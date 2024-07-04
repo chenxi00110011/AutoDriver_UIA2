@@ -15,9 +15,18 @@ logger.add(rui.LOGS_DIR + f"\\{ntp_util.timestamp_to_date()}.log", encoding="utf
 
 # delay_list = [60, 120, 300, 600]
 users = ["18086409233", "13638601129"]
-sleep_time = 15
-dids = ['000202', '000507', '000091', '000602', '000632', '000274']
-qualitys = ['超清', '高清', '流畅']
+sleep_time = 30
+dids = [
+        '办公室阻塞串口14',
+        '办公室阻塞串口12',
+        '深圳设备1',
+        '深圳设备2'
+]
+qualitys = [
+            '超清',
+            '高清',
+            '流畅'
+            ]
 combinations = [(did, quality) for quality in qualitys for did in dids]
 logger.info(combinations)
 wake_up_times = {'直播唤醒': [],
@@ -32,6 +41,7 @@ def test_pull_live_stream(did: str, quality: str, setup_ruiboshi: Uiautomator2So
     time.sleep(sleep_time)
     app = setup_ruiboshi
     app.did = did
+    app.go_to_page("首页", '13590267955', 'ljf123456')
     start_time = time.time()
     app.go_to_page("直播", did)
     if app.exists_element(value='提示'):
@@ -49,6 +59,7 @@ def test_pull_live_stream(did: str, quality: str, setup_ruiboshi: Uiautomator2So
     wake_up_times['直播唤醒'].append(wake_up_time)
     logger.debug("***********************进入直播用时{:.2f}秒**********************".format(wake_up_time))
     app.title['wakeup_time'] = "{:.2f}".format(wake_up_time)
+    time.sleep(2)
     app.go_to_page("切换画质", quality)
     time.sleep(5)
     app.go_to_page("截图")
@@ -58,7 +69,9 @@ def test_pull_live_stream(did: str, quality: str, setup_ruiboshi: Uiautomator2So
     app.go_to_page("回放")
     time.sleep(10)
     app.go_to_page("截图")
+    app.app_stop_()
 
+#
 # @pytest.mark.aov_core_oppo
 # @pytest.mark.parametrize("did", dids)
 # @pytest.mark.repeat(1)
@@ -72,7 +85,7 @@ def test_pull_live_stream(did: str, quality: str, setup_ruiboshi: Uiautomator2So
 #     while app.exists_element(selector="text", value='提示'):
 #         time.sleep(5)
 #     count = 0
-#     while not app.exists_element(value="运动检测"):
+#     while not app.exists_element(value="工作模式"):
 #         count += 1
 #         if count >= 30:
 #             logger.error("进入设置页面超时")
@@ -83,4 +96,6 @@ def test_pull_live_stream(did: str, quality: str, setup_ruiboshi: Uiautomator2So
 #     wake_up_times['设置唤醒'].append(wake_up_time)
 #     logger.debug("***********************进入设置页面用时{:.2f}秒**********************".format(wake_up_time))
 #     logger.debug(wake_up_times['设置唤醒'])
-#     app.go_to_page("截图")
+#     app.go_to_page("翻转")
+#     app.app_stop_()
+#

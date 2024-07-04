@@ -17,7 +17,7 @@ def test_sd_format(macList: list):
     for mac in macList:
         ip = get_ip(mac)
         # 设备重启
-        DeviceAPIManager(f'http://{ip}').dev_reboot()
+        DeviceAPIManager(f'{ip}').dev_reboot()
 
     time.sleep(120)
 
@@ -25,7 +25,7 @@ def test_sd_format(macList: list):
         print(mac)
         ip = get_ip(mac)
         # 获取SD卡信息
-        dev = DeviceAPIManager(f'http://{ip}')
+        dev = DeviceAPIManager(f'{ip}')
         tmp = dev.get_sdcard_info()
         print(tmp['DiskList']['Disk']['DiskStorageAttribute'])
         assert tmp['DiskList']['Disk']['DiskStorageAttribute'] == 'writting'
@@ -38,16 +38,17 @@ def test_sd_format(macList: list):
         print(mac)
         ip = get_ip(mac)
         # 获取SD卡信息
-        dev = DeviceAPIManager(f'http://{ip}')
+        dev = DeviceAPIManager(f'{ip}')
         tmp = dev.get_sdcard_info()
         print(tmp['DiskList']['Disk']['DiskStorageAttribute'])
         assert tmp['DiskList']['Disk']['DiskStorageAttribute'] == 'writting'
 
 
 if __name__ == '__main__':
-    mac_list = ['5A:5A:00:6B:5A:D1',
-                # '5A:5A:00:6B:59:22',
-                # '5A:5A:00:6B:5B:1D',
-                '5A:5A:00:6B:5A:DF']
-    for i in tqdm(range(300)):
+    mac_list = ['5A:00:55:F1:7B:7E',
+                '5A:00:65:85:ED:82',
+                '5A:00:7A:A0:F5:D5',
+                '5A:5A:00:83:78:B0'
+                ]
+    for i in tqdm(range(20)):
         test_sd_format(mac_list)

@@ -19,7 +19,7 @@ logger.add(rui.LOGS_DIR + f"\\{ntp_util.timestamp_to_date()}.log", encoding="utf
 # delay_list = [60, 120, 300, 600]
 users = ["18086409233", "13638601129"]
 sleep_time = 5
-dids = ['000602', '000632']
+dids = ['000244',]
 qualitys = ['超清', '高清', '流畅']
 combinations = [(did, quality) for quality in qualitys for did in dids]
 logger.info(combinations)

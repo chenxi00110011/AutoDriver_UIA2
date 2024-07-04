@@ -48,6 +48,9 @@ class UiAutomator2TestDriver:
         adb.set_default_input_method(self.androidDeviceID, 'io.appium.settings/.UnicodeIME')
         return device
 
+    def app_stop_(self):
+        self.driver.app_stop(self.appPackage)
+
     # @printer
     def localize_element(self, localization_method, edges) -> _selector.UiObject:
 
@@ -249,6 +252,10 @@ class UiAutomator2TestDriver:
             localized_elements = self.localize_element(localization_method="resource-id", edges=selection_criteria)
             localized_elements.click()
 
+    def get_element_text(self, element: _selector.UiObject):
+        val = element.get_text()
+        self.title['text'] = val
+
     def click_or_input(self, step, content=None):
         """
             根据步骤信息执行点击或输入操作。
@@ -283,6 +290,10 @@ class UiAutomator2TestDriver:
         elif step['控件类型'] == '截图':
             # 截取屏幕截图
             self.save_screenshot()  # 使用截图方法
+        elif step['控件类型'] == '获取文本':
+            # 获取属性值
+            self.get_element_text(element)
+
         # 判断等待时间不为nan
         if step['等待时间'] == step['等待时间']:
             time.sleep(step['等待时间'])
@@ -358,7 +369,14 @@ class UiAutomator2TestDriver:
 
 if __name__ == '__main__':
     from uiautomator2_manager import uiautomator2_extended
+    import re
 
     d = uiautomator2_extended.Uiautomator2SophisticatedExecutor('H675FIS8JJU8AMWW', 'com.zwcode.p6slite')
     time.sleep(5)
-    d.swipe_until_element_visible('000632')
+    d.go_to_page('设备设置', '000244')
+    d.go_to_page('获取电量')
+    print(d.title)
+    match = re.search(r'\d+', d.title['text'])
+    if match:
+        battery_percentage = int(match.group())
+        print("电池电量:", battery_percentage, "%")
