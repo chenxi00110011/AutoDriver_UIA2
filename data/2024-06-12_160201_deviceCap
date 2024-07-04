@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?> <Device> <StreamCount>2</StreamCount>
+<AlarmOutCount>1</AlarmOutCount> <AlarmInCount>0</AlarmInCount> <SubHistoryStreamSupport>false</SubHistoryStreamSupport>
+<FunctionList> <SD>true</SD> <WIFI>false</WIFI> <_4G>true</_4G> <Motor>true</Motor>
+<SerialTransparent>false</SerialTransparent> <WiredAlarm>false</WiredAlarm>
+<WiredNetwork>true</WiredNetwork> <DisableIrLed>false</DisableIrLed> <ShakingHead>false</ShakingHead>
+<TwoWayAudio>true</TwoWayAudio> <AP>true</AP> <Wavelink>false</Wavelink> <Smartlink>false</Smartlink>
+<Email>true</Email> <FTP>true</FTP> <RemoteReboot>true</RemoteReboot> <Restore>true</Restore>
+<PasswordModify>true</PasswordModify> <AutoIP>false</AutoIP> <SubHistoryStreamSupport>true</SubHistoryStreamSupport>
+<AudioAlarm>true</AudioAlarm> <AudioAlarmAudioFormat> <G711u>true</G711u>
+<AMR>false</AMR> </AudioAlarmAudioFormat> <TimeSnapshot>true</TimeSnapshot>
+<Snapshot>false</Snapshot> <cloud_upgrade>true</cloud_upgrade> <ParamFixed>true</ParamFixed>
+<P2PUpgrade>true</P2PUpgrade> <UPNP>false</UPNP> <DeviceShared>true</DeviceShared>
+<NoPtzAf>false</NoPtzAf> <CloudStorage> <Support>false</Support> </CloudStorage>
+<RecordPlanV2> <Support>true</Support> <Main>true</Main> <Sub>true</Sub> </RecordPlanV2>
+<PlaybackSpeed> <Support>true</Support> <Max>8</Max> </PlaybackSpeed> <AlarmOutPlan>
+<Support>true</Support> </AlarmOutPlan> <PrivacyZone> <Support>false</Support>
+</PrivacyZone> <PowerLineFrequencyStrength> <Support>true</Support> </PowerLineFrequencyStrength>
+<DeviceShareAndSelfUnbind>true</DeviceShareAndSelfUnbind> <Alarm> <OneClickAlarmTrigger>true</OneClickAlarmTrigger>
+<LightAlarm> <Support>true</Support> </LightAlarm> </Alarm> <AIOverlay> <AllStreamUnity>true</AllStreamUnity>
+<Human>true</Human> <PolygonRegion>true</PolygonRegion> <TraverseLine>false</TraverseLine>
+</AIOverlay> <DetectRegion> <TraverseLine> <Support>false</Support> <Direction>
+<AB>false</AB> <BA>false</BA> <A-B>false</A-B> </Direction> </TraverseLine>
+<PolygonRegion> <Support>true</Support> <MaxLine>8</MaxLine> </PolygonRegion>
+</DetectRegion> <AppUI> <EmailV2>true</EmailV2> <AdvancedPeopleTrack>true</AdvancedPeopleTrack>
+<FlipSwitch>true</FlipSwitch> <StorageCapacity>true</StorageCapacity> <Encoder>
+<FrameRate>true</FrameRate> <BitRate>true</BitRate> </Encoder> <AIOTConfigV1>true</AIOTConfigV1>
+<LightConfig>1</LightConfig> <DigitZoom> <Support>true</Support> </DigitZoom>
+</AppUI> <_4GConfig> <Support>true</Support> <UIVersion>1</UIVersion> <Power>
+<Support>false</Support> <Low>true</Low> </Power> <Card> <Support>false</Support>
+<Cut>false</Cut> </Card> </_4GConfig> <LightCapability> <Support>true</Support>
+</LightCapability> <NightLedEnable> <Support>true</Support> </NightLedEnable>
+<SerialPTZ> <Support>true</Support> </SerialPTZ> <ImageProfile> <WhiteBalance>
+<Mode> <Auto1> <Support>false</Support> </Auto1> <Auto2> <Support>false</Support>
+</Auto2> </Mode> </WhiteBalance> </ImageProfile> <AEC> <Support>false</Support>
+</AEC> <SolarBattery> <Support>true</Support> <ReliablePower>false</ReliablePower>
+</SolarBattery> <Protocol> <P6STransHTTP> <Support>true</Support> </P6STransHTTP>
+<P6SMessageV1> <Support>true</Support> </P6SMessageV1> <P6SOperations> <Support>true</Support>
+</P6SOperations> </Protocol> <Push> <CryDetect> <Support>true</Support> </CryDetect>
+</Push> <AwakeSchedule> <Support>true</Support> </AwakeSchedule> </FunctionList>
+<FunctionListAboutChannel> <ChannelList> 
+<Channel ChannelID="0">
+<RTMP>false</RTMP> <Audio>true</Audio> <Motion>true</Motion> <ColorNight>true</ColorNight>
+<IntelligentNight>true</IntelligentNight> <NormalWhite>false</NormalWhite>
+<NormalInfrared>true</NormalInfrared> <WarmLight>true</WarmLight> <LocalRecordFormat>
+<PRV>true</PRV> <AVI>false</AVI> </LocalRecordFormat> <MotionSenstive> <Highest>false</Highest>
+<Higher>false</Higher> <High>true</High> <Middle>true</Middle> <Low>true</Low>
+<Lower>false</Lower> <Lowest>false</Lowest> </MotionSenstive> <multi_osd>false</multi_osd>
+<mosd_cnt>5</mosd_cnt> <mosd_char_cnt_every_osd>180</mosd_char_cnt_every_osd>
+<mosd_line_every_osd>5</mosd_line_every_osd> <mosd_cord>1</mosd_cord> <mosd_char_count_every_line>30</mosd_char_count_every_line>
+<IrCutMode> <VariableInfrared>false</VariableInfrared> <VariableWhite>false</VariableWhite>
+</IrCutMode> 
+<ImageMode enable="true">
+<Normal>true</Normal> <FaceNoExposure>true</FaceNoExposure> <LicensePlate>false</LicensePlate>
+</ImageMode>
+<PTZ_Advance_Cruise>true</PTZ_Advance_Cruise> <PTZ_Advance_Watch>true</PTZ_Advance_Watch>
+<SmartEvent> <PeopleDetect>true</PeopleDetect> <Ai265Plus>false</Ai265Plus>
+<AiFace>false</AiFace> <PeopleTrack>true</PeopleTrack> <FaceSnap>false</FaceSnap>
+<FaceReco>false</FaceReco> <FaceBase>false</FaceBase> <BehaviorAnalysis>false</BehaviorAnalysis>
+<PIR>false</PIR> <TalkingForward>false</TalkingForward> </SmartEvent> <AudioCodec>
+<G711u>true</G711u> <G711a>false</G711a> </AudioCodec> <AudioAlarmType> <Custom>true</Custom>
+<Alarm>true</Alarm> <dog>true</dog> <warning>true</warning> <monitoring>true</monitoring>
+<welcome>true</welcome> <DeepWater>true</DeepWater> <PrivateTerritory>true</PrivateTerritory>
+<DangerZone>true</DangerZone> <ValuableObjects>true</ValuableObjects> <HighWarning>true</HighWarning>
+<PrivateParking>true</PrivateParking> <MindPersonalBelongings>true</MindPersonalBelongings>
+<CatchThief>true</CatchThief> <Help>true</Help> <Classification>true</Classification>
+<RecyclableWaste>true</RecyclableWaste> <HouseholdFoodWaste>true</HouseholdFoodWaste>
+<HazardousWaste>true</HazardousWaste> <ResidualWaste>true</ResidualWaste>
+<ClassificationAll>true</ClassificationAll> </AudioAlarmType> <FaceSnapFilterRegion>
+<MaxDetectFaceRegionSize> <Width>0</Width> <Height>0</Height> </MaxDetectFaceRegionSize>
+<MinDetectFaceRegionSize> <Width>0</Width> <Height>0</Height> </MinDetectFaceRegionSize>
+</FaceSnapFilterRegion> </Channel>
+</ChannelList> <FunctionListSdCard> <fast_playback>true</fast_playback> </FunctionListSdCard>
+</FunctionListAboutChannel> </Device>
+
