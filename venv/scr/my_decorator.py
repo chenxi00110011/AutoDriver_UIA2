@@ -2,6 +2,7 @@
 
 import logging as log
 import os
+import re
 import threading
 import time
 from functools import wraps
@@ -353,6 +354,37 @@ def forbidden_method(func):
 
     return wrapper
 
+
+# 定义一个装饰器工厂，它接收一个正则表达式作为参数
+def match_pattern_in_list(pattern):
+    # 编译正则表达式，以便在装饰器内部多次使用，提高效率
+    compiled_pattern = re.compile(pattern)
+
+    # 返回一个真正的装饰器，它接受一个函数作为参数
+    def decorator(func):
+        # 定义一个包装函数，它将替代原函数的调用
+        def wrapper(*args, **kwargs):
+            # 调用原始函数，并获取其返回值
+            result = func(*args, **kwargs)
+
+            # 检查原始函数的返回值是否为列表
+            if isinstance(result, list):
+                # 使用列表推导式，遍历列表中的每一个元素
+                # 对于每一个元素，使用finditer方法查找所有匹配正则表达式的子串
+                # 如果找到匹配，使用match.group()获取匹配的子串，并将其收集到新的列表中
+                matched_items = [match.group() for item in result for match in compiled_pattern.finditer(item)]
+
+                # 返回包含所有匹配子串的新列表
+                return matched_items
+            else:
+                # 如果原始函数的返回值不是列表，抛出一个ValueError异常
+                raise ValueError("The decorated function must return a list.")
+
+        # 返回包装函数，它将替代原函数
+        return wrapper
+
+    # 返回装饰器工厂，等待接收一个函数参数
+    return decorator
 
 if __name__ == '__main__':
     logger.info(ntp_util.timestamp_to_date())

@@ -1,4 +1,6 @@
 import os
+import re
+from my_decorator import match_pattern_in_list, print_list_items
 
 
 def rename_file(old_path, new_name):
@@ -17,8 +19,19 @@ def rename_file(old_path, new_name):
     except OSError as e:
         print(f"Error renaming file: {e}")
 
+
+@print_list_items
+@match_pattern_in_list(r'\d{3,}')
+def list_files(directory, extension=None):
+    file_list = []
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if extension is None or extension in file:
+                file_list.append(file)
+    return file_list
+
+
 if __name__ == '__main__':
     # Example usage:
-    old_file_path = r"C:\Users\Administrator\Desktop\data\sftp\139.159.218.144\DID_Dump.log"
-    new_file_name = r"C:\Users\Administrator\Desktop\data\sftp\139.159.218.144\DID_Dump_01.log"
-    rename_file(old_file_path, new_file_name)
+    file_list = list_files(r"C:\Users\Administrator\Desktop\data\sftp\139.159.218.144", "AA")
+    print(sorted(file_list, key=int))

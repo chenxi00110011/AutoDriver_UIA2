@@ -144,7 +144,7 @@ if __name__ == '__main__':
 
     # 使用cron风格的时间设置，每30分钟执行一次，* 表示任意值，因此"*/30"表示每30分钟
     job()
-    schedule.every(30).minutes.do(job)
+    schedule.every(60).minutes.do(job)
 
     print("Task scheduler started...")
 

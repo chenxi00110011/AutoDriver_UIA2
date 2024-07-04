@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DeviceInfo Version="1.0">
+    <TransferFileTypeEncryptionType>1</TransferFileTypeEncryptionType>
+    <DeviceName>IPC</DeviceName>
+    <BoardType>20767</BoardType>
+    <DeviceTypeName>W3F-44PGM-S/W</DeviceTypeName>
+    <BoardId>2116</BoardId>
+    <CustomerID>49162</CustomerID>
+    <CustomerVersion>V001</CustomerVersion>
+    <SerialNum>I211618956B14A0C41B6E0A</SerialNum>
+    <HardWareVersion>0.1.0-20201103</HardWareVersion>
+    <SoftWareVersion>1.0.0-20230911Z1S</SoftWareVersion>
+    <ChipID>FH8852V2114A3F3A58F0680F</ChipID>
+    <VideoInputChannels>1</VideoInputChannels>
+    <AudioChannels>1</AudioChannels>
+    <AlarmInputChannels>0</AlarmInputChannels>
+    <AlarmOutputChannels>1</AlarmOutputChannels>
+    <MonitorCount>0</MonitorCount>
+    <SpotOutChannels>0</SpotOutChannels>
+    <TwoWayAudio>true</TwoWayAudio>
+    <RejectEmptyPassword>false</RejectEmptyPassword>
+    <SmartAVCList Version="1.0">
+        <SmartAVC Version="1.0">
+            <Support>false</Support>
+        </SmartAVC>
+    </SmartAVCList>
+    <IsSupportActiveCode>true</IsSupportActiveCode>
+    <ActiveCode />
+    <ActiveStatus>success</ActiveStatus>
+    <RTMP Version="1.0">
+        <IsSupportActiveCode>false</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction />
+    </RTMP>
+    <AF Version="1.0">
+        <IsSupportActiveCode>true</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction>false</ActiveFunction>
+    </AF>
+    <CAY_AF Version="1.0">
+        <IsSupportActiveCode>false</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction />
+    </CAY_AF>
+    <DL Version="1.0">
+        <IsSupportActiveCode>true</IsSupportActiveCode>
+        <ActiveStatus>success</ActiveStatus>
+        <ActiveFunction>false</ActiveFunction>
+    </DL>
+    <face_snapshot Version="1.0">
+        <IsSupportActiveCode>false</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction />
+    </face_snapshot>
+    <face_recognition Version="1.0">
+        <IsSupportActiveCode>false</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction />
+    </face_recognition>
+    <people_track Version="1.0">
+        <IsSupportActiveCode>true</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction>false</ActiveFunction>
+    </people_track>
+    <ai_stick Version="1.0">
+        <IsSupportActiveCode>false</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction />
+    </ai_stick>
+    <megvii_face_snapshot Version="1.0">
+        <IsSupportActiveCode>false</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction />
+    </megvii_face_snapshot>
+    <face_detection Version="1.0">
+        <IsSupportActiveCode>false</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction />
+    </face_detection>
+    <consum_uvc Version="1.0">
+        <IsSupportActiveCode>false</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction />
+    </consum_uvc>
+    <vehicle_registration_plate Version="1.0">
+        <IsSupportActiveCode>false</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction />
+    </vehicle_registration_plate>
+    <traffic_operation Version="1.0">
+        <IsSupportActiveCode>false</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction />
+    </traffic_operation>
+    <gas_detection Version="1.0">
+        <IsSupportActiveCode>false</IsSupportActiveCode>
+        <ActiveStatus>invalid active code</ActiveStatus>
+        <ActiveFunction />
+    </gas_detection>
+</DeviceInfo>
+
