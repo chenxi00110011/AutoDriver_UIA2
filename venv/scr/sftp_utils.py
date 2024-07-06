@@ -133,9 +133,16 @@ def read_remote_file_content(host, port, username, password, filepath):
 if __name__ == '__main__':
 
     host = '139.159.218.144'
+    hosts = ['116.205.164.133']
     port = 22  # SFTP默认端口
     username = 'root'
     password = 'ZOWELL@123456'  # 或者使用密钥对认证
     remote_directory = '/root/EasyDebug/config/EasyDebugConfig.ini'  # 你想查看的远程目录
-    content = read_remote_file_content(host, port, username, password, remote_directory)
-    print(content)
+    local_text = read_remote_file_content(host, port, username, password, remote_directory)
+
+    for host in hosts:
+        remote_file_content = read_remote_file_content(host, port, username, password, remote_directory)
+        if remote_file_content == local_text:
+            print(f"{host}服务器比对成功，内容相同")
+        else:
+            print(f"比对不成功，{host}服务器的文本内容是\n{remote_file_content}")
