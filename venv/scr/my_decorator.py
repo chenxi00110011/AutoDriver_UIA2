@@ -15,7 +15,7 @@ import xrs_time
 import adb_commands
 from loguru import logger
 from config_module import ConfigManagerRUIBOSHI as rui
-
+print(rui.LOGS_DIR + f"\\{ntp_util.timestamp_to_date()}.log")
 logger.add(rui.LOGS_DIR + f"\\{ntp_util.timestamp_to_date()}.log", encoding="utf-8")
 
 desktop_path = Path(os.path.expanduser("~")) / "Desktop"
@@ -385,6 +385,15 @@ def match_pattern_in_list(pattern):
 
     # 返回装饰器工厂，等待接收一个函数参数
     return decorator
+
+
+def no_parentheses(func):
+    # 用于直接调用方法返回值，无需括号
+    def inner(*args, **kwargs):
+        return func(*args, **kwargs)
+
+    return inner
+
 
 if __name__ == '__main__':
     logger.info(ntp_util.timestamp_to_date())
