@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<IrCutFillter Version="1.0">
+    <Mode>night</Mode>
+    <DayStartTime>07:00:00</DayStartTime>
+    <DayEndTime>19:00:00</DayEndTime>
+    <Sensitivity>50</Sensitivity>
+    <SwitchTime>0</SwitchTime>
+    <IrCutReverse>positive</IrCutReverse>
+    <ColorLastTime>30</ColorLastTime>
+    <ImageMode>facenoexposure</ImageMode>
+    <VariableInfraredThreshold>50</VariableInfraredThreshold>
+    <VariableWhiteThreshold>50</VariableWhiteThreshold>
+    <EnableLight>true</EnableLight>
+    <CustomStartTime />
+    <CustomStopTime />
+    <VarWhiteModeStartTime />
+    <VarWhiteModeStopTime />
+    <VarWhiteWorkMode />
+    <VarWhiteControlMode />
+    <WDRSwitch>false</WDRSwitch>
+    <VarInfraredWorkMode>custom</VarInfraredWorkMode>
+    <NormalWhiteLightOffLimit>0</NormalWhiteLightOffLimit>
+    <NormalWhiteLightOnLimit>0</NormalWhiteLightOnLimit>
+    <CustomBrightness>0</CustomBrightness>
+    <PWMValue>0</PWMValue>
+    <WDRLevel>0</WDRLevel>
+    <VarInfraredBrightness>0</VarInfraredBrightness>
+    <VarWhiteBrightness>0</VarWhiteBrightness>
+    <VarWhiteLightOnThreshold>0</VarWhiteLightOnThreshold>
+    <VarWhiteLightOffThreshold>0</VarWhiteLightOffThreshold>
+    <ColorNightThreshold>0</ColorNightThreshold>
+    <IntelligentThreshold>0</IntelligentThreshold>
+</IrCutFillter>
